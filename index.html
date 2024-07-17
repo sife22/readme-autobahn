@@ -93,6 +93,23 @@
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const item = document.getElementById('logo');
 
+      item.addEventListener('mouseover', () => {
+          // const r = Math.floor(Math.random() * 256);
+          // const g = Math.floor(Math.random() * 256);
+          // const b = Math.floor(Math.random() * 256);
+          // item.style.color = `rgb(${r}, ${g}, ${b})`;
+          item.style.transition = 'color 0.2s, transform 0.2s';
+          item.style.transform = 'scale(1.09)';
+          item.style.cursor = 'pointer';
+      });
+
+      item.addEventListener('mouseout', () => {
+          // item.style.color = '';
+          item.style.transform = '';
+      });
+</script>
   </body>
 </html>
